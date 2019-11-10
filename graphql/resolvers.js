@@ -99,10 +99,8 @@ const resolvers = {
     }
   },
   RootQuery: {
-    produit: async (parent, args, { models, user }) => {
-    //   if (!user) return new Error("vous devez vous authentifiez d'abord");
+    produit: async (parent, args, { models }) => {
       try {
-        //   if (!args.orderBy) args.orderBy = [["id", "DESC"]];
         return await models.produit.findOne({
           where: {
             id: args.productId
@@ -136,10 +134,8 @@ const resolvers = {
         return new Error("une erreur est survenue, reessayer!");
       }
     },
-    categorie: async (parent, args, { models, user }) => {
-    //   if (!user) return new Error("vous devez vous authentifiez d'abord");
+    categorie: async (parent, args, { models }) => {
       try {
-        //   if (!args.orderBy) args.orderBy = [["id", "DESC"]];
         return await models.categorie.findOne({
           where: {
             id: args.categorieId
@@ -149,8 +145,7 @@ const resolvers = {
         return new Error("une erreur est survenue, reessayer!");
       }
     },
-    produits: (parent, args, { models, user }) => {
-    //   if (!user) return new Error("vous devez vous authentifiez d'abord");
+    produits: (parent, args, { models }) => {
       try {
         if (!args.orderBy) args.orderBy = [["id", "DESC"]];
         return models.produit.findAll({
@@ -228,8 +223,7 @@ const resolvers = {
         return new Error("une erreur est survenue, reessayer!");
       }
     },
-    categories: (parent, args, { models, user }) => {
-    //   if (!user) return new Error("vous devez vous authentifiez d'abord");
+    categories: (parent, args, { models }) => {
       try {
         if (!args.orderBy) args.orderBy = [["id", "DESC"]];
         return models.categorie.findAll({
