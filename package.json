@@ -1,0 +1,23 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "api for ecommerce",
+  "main": "server.js",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-express": "^2.9.4",
+    "bcrypt": "^3.0.6",
+    "cors": "^2.8.5",
+    "dataloader": "^1.4.0",
+    "express": "^4.17.1",
+    "graphql": "^14.5.8",
+    "jsonwebtoken": "^8.5.1",
+    "jwt": "^0.2.0",
+    "lodash": "^4.17.15",
+    "mysql2": "^1.7.0",
+    "sequelize": "^5.19.2",
+    "sequelize-cli": "^5.5.1",
+    "subscriptions-transport-ws": "^0.9.16",
+    "uuid": "^3.3.3"
+  }
+}
